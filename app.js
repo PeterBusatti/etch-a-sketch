@@ -16,11 +16,20 @@ function createSquares(num) {
         box.style.height = boxHeight;
         box.style.width = boxWidth;
         container.appendChild(box);
-        
-        console.log(box.style.height);
     }
 }
 
-
-
 playGridCreate(testNum);
+
+const individualBox = Array.from(document.getElementsByClassName("box"));
+
+individualBox.forEach(box => box.addEventListener("mouseenter", passChanger) );
+
+function passChanger(e) {
+    if(this.classList.contains("box")) {
+        e.target.className = "box-first-pass";
+    }
+    else if(this.classList.contains("box-first-pass")) {
+        e.target.className = "box-second-pass";
+    }
+}
