@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+#container {
+    border: 2px solid red;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color:grey;
+}
