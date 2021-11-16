@@ -8,7 +8,7 @@ body {
     justify-content: center;
 }
 #container {
-    border: 2px solid red;
+    border: 15px solid red;
     height: 500px;
     width: 500px;
     display: flex;
@@ -17,4 +17,12 @@ body {
 
 .box {
     background-color:grey;
+}
+
+.box-first-pass {
+    background-color: blue;
+}
+
+.box-second-pass {
+    background-color: green;
 }
