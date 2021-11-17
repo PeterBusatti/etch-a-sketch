@@ -1,26 +1,56 @@
 * {
-    margin: 0;
-    
+    margin: 0;  
 }
 
 body {
+    background-color: #5d2906;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#title h1 {
+    text-align: center;
+    color: rgb(230, 31, 31);
+}
+
+#middle-container {
     display: flex;
     justify-content: center;
 }
-#container {
-    border: 15px solid red;
-    height: 500px;
-    width: 500px;
+#middle-main-container {
+    border: 20px solid rgb(172, 22, 22);
+    height: 600px;
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
 }
 
+#middle-left {
+    background-color: rgba(218, 218, 218, 25%);
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.slider {
+    
+}
+#middle-right {
+    background-color: rgba(218, 218, 218, 25%);
+    flex: auto;
+}
+
 .box {
-    background-color:grey;
+    background-color:rgb(165, 165, 165);
 }
 
 .box-first-pass {
-    background-color: blue;
+    background-color: black;
 }
 
 .box-second-pass {
