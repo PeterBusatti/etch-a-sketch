@@ -29,8 +29,7 @@ body {
     width: 600px;
     display: flex;
     flex-wrap: wrap;
-    align-self: center;
-    
+    align-self: center;  
 }
 
 #middle-left {
@@ -79,3 +78,4 @@ body {
 .box-second-pass {
     background-color: green;
 }
+
