@@ -50,9 +50,7 @@ body {
     gap: 3px;
     font-size: 20px;
 }
-.slider {
-    
-}
+
 #middle-right {
     background-color: rgba(218, 218, 218, 25%);
     flex: 1;
