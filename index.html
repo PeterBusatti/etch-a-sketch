@@ -14,12 +14,25 @@
         <div id="title"><h1>Etch-A-Sketch</h1></div>
         <div id="middle-container">
             <div id="middle-left">
-                
-                    <input type="range" min="2" max="100" step="2" value="24" class="slider" id="sliderRange">
-                
-                </div>
+                <form>
+                    <label for="slider">Choose a grid size:</label>
+                    <input name="slider" type="range" min="2" max="100" step="2" value="24" class="slider" id="gridSelect">
+                    <br>
+                    <label for="style">Choose a color style:</label> 
+                    <select name="style" id="colorSelect">
+                        <option value="black">Black</option>
+                        <option value="rainbow">Rainbow</option>
+                        <option value="darken">Darken Color</option>
+                    </select> 
+                </form> 
+            </div>
             <div id="middle-main-container"></div>
-            <div id="middle-right"></div>
+            <div id="middle-right">
+                <h2>How to play:</h2>
+                <p>Draw by hovering over the squares in the play area.</p>
+                <p>Change the size of the grid by using the slider.</p>
+                <p>Change the color you draw by using the dropdown.</p>
+            </div>
         </div>
         <div id="footer"></div>
     </div>
