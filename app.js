@@ -2,6 +2,7 @@ const container = document.getElementById("middle-main-container");
 const colorSelect = document.getElementById("color-select");
 const gridSelect = document.getElementById("grid-select");
 const gridOutputNum = document.getElementById("grid-output-num");
+const resetBtn = document.getElementById("reset-btn");
 
 // setting page load values
 let color = "black";
@@ -76,3 +77,10 @@ function refresh () {
     individualBox = [];
 }
 
+resetBtn.addEventListener("click", () => {
+    individualBox.forEach(box => box.style.backgroundColor = "#a5a5a5")
+});
+
+/*function eraseSquares() {
+ individualBox.forEach(box => box.style.backgroundColor = "#a5a5a5");
+}*/
