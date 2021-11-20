@@ -8,22 +8,27 @@ let color = "black";
 colorSelect.value = "black";
 gridSelect.value = 30;
 
-let squareNum = gridSelect.value;
+let gridValue = gridSelect.value;
 let individualBox = [];
 
 function playGridCreate(base) {
     let gridCount = base * base;
+    
+    let output = document.createElement('p');
+    output.textContent = gridValue + "x" + gridValue;
+    gridOutputNum.appendChild(output);
+
     createSquares(gridCount); 
+    
     individualBox = Array.from(document.getElementsByClassName("box")); 
     individualBox.forEach(box => box.addEventListener("mouseenter", passChanger));
-    let output = document.createElement('p');
-    output.textContent = squareNum + "x" + squareNum;
-    gridOutputNum.appendChild(output);
 }
 
 function createSquares(num) {
-    const boxHeight = (document.getElementById("middle-main-container").clientHeight / squareNum) + "px";
-    const boxWidth = (document.getElementById("middle-main-container").clientWidth / squareNum) + "px";
+    
+    const boxHeight = (document.getElementById("middle-main-container").clientHeight / gridValue) + "px";
+    const boxWidth = (document.getElementById("middle-main-container").clientWidth / gridValue) + "px";
+    
     for (let i = 1; i <= num; i++) {
         const box = document.createElement("div");
         box.className = "box";
@@ -33,7 +38,7 @@ function createSquares(num) {
     }
 }
 
-playGridCreate(squareNum);
+playGridCreate(gridValue);
 
 function passChanger(e) {
     if(color === "black") {
@@ -58,8 +63,8 @@ gridSelect.addEventListener("change", changeGridValue);
 
 function changeGridValue() {
     refresh();
-    squareNum = this.value;
-    playGridCreate(squareNum);
+    gridValue = this.value;
+    playGridCreate(gridValue);
 }
 
 function refresh () {
