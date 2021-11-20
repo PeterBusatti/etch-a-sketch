@@ -12,6 +12,10 @@ gridSelect.value = 30;
 let gridValue = gridSelect.value;
 let individualBox = [];
 
+resetBtn.addEventListener("click", () => {
+    individualBox.forEach(box => box.style.backgroundColor = "#a5a5a5")
+});
+
 function playGridCreate(base) {
     let gridCount = base * base;
     
@@ -77,10 +81,4 @@ function refresh () {
     individualBox = [];
 }
 
-resetBtn.addEventListener("click", () => {
-    individualBox.forEach(box => box.style.backgroundColor = "#a5a5a5")
-});
 
-/*function eraseSquares() {
- individualBox.forEach(box => box.style.backgroundColor = "#a5a5a5");
-}*/
