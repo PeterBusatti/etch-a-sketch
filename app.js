@@ -15,6 +15,9 @@ let individualBox = [];
 resetBtn.addEventListener("click", () => {
     individualBox.forEach(box => box.style.backgroundColor = "#a5a5a5")
 });
+colorSelect.addEventListener("change", function() {
+    color = this.value
+});
 
 function playGridCreate(base) {
     let gridCount = base * base;
@@ -30,7 +33,6 @@ function playGridCreate(base) {
 }
 
 function createSquares(num) {
-    
     const boxHeight = (document.getElementById("middle-main-container").clientHeight / gridValue) + "px";
     const boxWidth = (document.getElementById("middle-main-container").clientWidth / gridValue) + "px";
     
@@ -55,13 +57,6 @@ function passChanger(e) {
     else if (color === "eraser") {
         e.target.style.backgroundColor = "#a5a5a5"
     }
-}
-
-colorSelect.addEventListener("change", changeColor);
-
-function changeColor() {
-    color = this.value;
-    console.log(color);
 }
 
 gridSelect.addEventListener("change", changeGridValue);
