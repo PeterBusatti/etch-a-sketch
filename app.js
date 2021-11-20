@@ -1,7 +1,7 @@
 const container = document.getElementById("middle-main-container");
-const colorSelect = document.getElementById("colorSelect");
-const gridSelect = document.getElementById("gridSelect");
-const gridOutputNum = document.getElementById("gridOutputNum");
+const colorSelect = document.getElementById("color-select");
+const gridSelect = document.getElementById("grid-select");
+const gridOutputNum = document.getElementById("grid-output-num");
 
 // setting page load values
 let color = "black";
