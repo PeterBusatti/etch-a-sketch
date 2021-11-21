@@ -26,6 +26,15 @@ function playGridCreate(base) {
     output.textContent = gridValue + "x" + gridValue;
     gridOutputNum.appendChild(output);
 
+    if (gridValue == 70) {
+        container.style.height = "595px";
+        container.style.width = "595px";
+    } 
+    else {
+        container.style.height = "600px";
+        container.style.width = "600px";
+    }
+
     createSquares(gridCount); 
     
     individualBox = Array.from(document.getElementsByClassName("box")); 
